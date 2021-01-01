@@ -59,5 +59,11 @@ public class HK_004_Page {
     @FindBy(id = "Phone")
     public WebElement phoneTextBox;
 
+    @FindBy(id = "btnDelete")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//*[.='Would you like to continue?']")
+    public WebElement silmeOnayMesaji;
+
 }
 
