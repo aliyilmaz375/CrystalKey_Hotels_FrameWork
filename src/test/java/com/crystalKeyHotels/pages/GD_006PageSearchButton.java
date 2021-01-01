@@ -24,11 +24,11 @@ public class GD_006PageSearchButton {
 
 
     @FindBy(linkText = "Log in")
-    public WebElement ilkLogin;
+    public WebElement ilkLogin_;
 
 
     @FindBy(id="UserName")
-    public WebElement userNameTextBox;
+    public WebElement user_NameTextBox;
 
 
     @FindBy(id = "Password")
@@ -81,10 +81,10 @@ public class GD_006PageSearchButton {
         Driver.getDriver().get(ConfigReader.getProperty("ckHotel_URL"));
 
         //Sag ustteki Login butonuna tiklayin
-        login_.ilkLogin.click();
+        login_.ilkLogin_.click();
 
         //username butonuna valid bir username girin
-        login_.userNameTextBox.sendKeys(ConfigReader.getProperty("ckHotel_validUserName"));
+        login_.user_NameTextBox.sendKeys(ConfigReader.getProperty("ckHotel_validUserName"));
 
         //password butonuna valid password girin
         login_.pswTextBox.sendKeys(ConfigReader.getProperty("ckHotel_validPsw"));
@@ -115,4 +115,5 @@ public class GD_006PageSearchButton {
         String dataSonucText = US006Page.listeDataSonuc.getText();
         return dataSonucText;
     }
+
 }
