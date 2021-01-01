@@ -1,6 +1,5 @@
 package com.crystalKeyHotels.pages;
-import com.crystalHotel.utilities.ConfigReader;
-import com.crystalHotel.utilities.Driver;
+
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.WebElement;
