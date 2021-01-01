@@ -1,6 +1,5 @@
 package com.crystalKeyHotels.tests;
 
-
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.Keys;

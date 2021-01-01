@@ -77,4 +77,7 @@ public class AO_US_005Page {
     @FindBy(xpath = "//div[.='HotelRoom was inserted successfully']")
     public WebElement ck_success;
 
+    @FindBy(xpath = "//label[@class='error']")
+    public WebElement HataMesaji;
+
 }
