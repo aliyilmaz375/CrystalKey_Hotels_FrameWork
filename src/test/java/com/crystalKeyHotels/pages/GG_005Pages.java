@@ -2,6 +2,9 @@ package com.crystalKeyHotels.pages;
 
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
+
+import com.crystalKeyHotels.utilities.ConfigReader;
+import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
