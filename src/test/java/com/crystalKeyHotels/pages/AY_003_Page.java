@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AY_004_Page {
+public class AY_003_Page {
 
-    public AY_004_Page(){
+    public AY_003_Page(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -71,6 +71,12 @@ public class AY_004_Page {
 
     @FindBy(xpath = "//label[@for='Email']")
     public WebElement emailHataMesaji;
+
+    @FindBy(xpath = "//label[@for='Address']")
+    public WebElement adresHataMesaji;
+
+    @FindBy(xpath = "//label[@for='IDGroup']")
+    public WebElement IDGroupHataMesaji;
 
 
 }
