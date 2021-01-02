@@ -1,5 +1,11 @@
 package com.crystalKeyHotels.tests;
 
+
+import com.crystalKeyHotels.pages.GG_005Pages;
+import com.crystalKeyHotels.utilities.ConfigReader;
+import com.crystalKeyHotels.utilities.Driver;
+
+
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.Keys;
@@ -13,18 +19,19 @@ public class GG_005RoomCreation {
 
     @Test
     public void positiveTest() throws InterruptedException {
-        GG_005RoomCreation roomCreation = new GG_005RoomCreation();
-        roomCreation.login();
-        roomCreation.addHotelGiris();
+        GG_005Pages gg_005Pages = new GG_005Pages();
+
+        gg_005Pages.login();
+        gg_005Pages.addHotelGiris();
         //IDHotel dropdown’ına tıklayın ve bir otel secin....Cizgi Dusler Hotel
-        roomCreation.idHotel.click();
+        gg_005Pages.idHotel.click();
         Thread.sleep(5000);
-        Select select = new Select(roomCreation.idHotel);
+        Select select = new Select(gg_005Pages.idHotel);
         select.selectByValue("1027");
         // Code text box’ına rakamlardan olusan sayı girin..3900.
-        roomCreation.codeTextBox.click();
+        gg_005Pages.codeTextBox.click();
         Actions actions = new Actions(Driver.getDriver());
-        actions.click(roomCreation.codeTextBox)
+        actions.click(gg_005Pages.codeTextBox)
                 .sendKeys("code_textBox")
                 .sendKeys(Keys.TAB)
                 // Name text box’ına bir isim girin.....Double
@@ -37,26 +44,26 @@ public class GG_005RoomCreation {
                 .perform();
         // Description bolumune bir yazı yazın
         // Price textBox’ına rakamlardan olusan bir miktar girin....700
-        roomCreation.priceTextBox.sendKeys(ConfigReader.getProperty("PriceTextBox"));
-        roomCreation.priceTextBox.click();
+        gg_005Pages.priceTextBox.sendKeys(ConfigReader.getProperty("PriceTextBox"));
+        gg_005Pages.priceTextBox.click();
         // Room Type dropdown’ından bir roomType secin.... Queen
-        roomCreation.roomTypeDropDown.click();
-        Select select1 = new Select(roomCreation.roomTypeDropDown);
+        gg_005Pages.roomTypeDropDown.click();
+        Select select1 = new Select(gg_005Pages.roomTypeDropDown);
         select1.selectByValue("318");
         // Max Adult TextBox’ına bir sayı girin.....1
-        roomCreation.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("MaxAdultTextBox"));
+        gg_005Pages.maxAdultCountTextBox.sendKeys(ConfigReader.getProperty("MaxAdultTextBox"));
         //Max Children TextBox’ına bir sayı girin...0
-        roomCreation.maxChildCountTextBox.sendKeys(ConfigReader.getProperty("MaxChildrenTextBox"));
+        gg_005Pages.maxChildCountTextBox.sendKeys(ConfigReader.getProperty("MaxChildrenTextBox"));
         // Approved check box’ı isaretleyin
-        roomCreation.isAvaible.click();
+        gg_005Pages.isAvaible.click();
         // Save butonu tıklayın
-        roomCreation.saveBotuno.click();
+        gg_005Pages.saveBotuno.click();
         //  Görüntülenen “HotelRoom was inserted successfully” yazısını onayla
         Thread.sleep(5000);
-        Assert.assertEquals(roomCreation.sonucYazisi.getText(),"HotelRoom was inserted successfully");
+        Assert.assertEquals(gg_005Pages.sonucYazisi.getText(),"HotelRoom was inserted successfully");
         //Assert.assertTrue(roomCreation.sonucYazisi.isDisplayed());
         //ok butonuna basınız
-        roomCreation.okButonu.click();
+        gg_005Pages.okButonu.click();
 
 
 
