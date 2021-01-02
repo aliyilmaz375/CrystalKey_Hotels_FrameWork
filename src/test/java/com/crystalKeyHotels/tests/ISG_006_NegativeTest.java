@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ISG_006_Test {
+public class ISG_006_NegativeTest {
 
 
     @Test
@@ -39,7 +39,7 @@ public class ISG_006_Test {
 
         hotel_page.priceTextBox.sendKeys(ConfigReader.getProperty("price"));
         hotel_page.dateStart.sendKeys(ConfigReader.getProperty("girisTarih"));
-        hotel_page.dateEnd.sendKeys(ConfigReader.getProperty("bitisTarihi"));
+        hotel_page.dateEnd.sendKeys(ConfigReader.getProperty("invalidBitisTarihi"));
         hotel_page.adultAmount.sendKeys(ConfigReader.getProperty("adultAmount"));
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         hotel_page.childrenAmount.sendKeys(ConfigReader.getProperty("childrenAmount"));
