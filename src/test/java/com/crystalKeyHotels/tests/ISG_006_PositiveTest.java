@@ -13,7 +13,7 @@ public class ISG_006_PositiveTest {
 
 
     @Test
-    public void positoveTestCase01() throws InterruptedException {
+    public void positiveTestCase01() throws InterruptedException {
 
         Driver.getDriver().get(ConfigReader.getProperty("url_CrysHotel"));
 
