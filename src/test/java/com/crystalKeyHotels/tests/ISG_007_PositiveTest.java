@@ -1,6 +1,6 @@
 package com.crystalKeyHotels.tests;
 
-import com.crystalKeyHotels.pages.ISG_006_Page;
+import com.crystalKeyHotels.pages.ISG_007_Page;
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ISG_006_PositiveTest {
+public class ISG_007_PositiveTest {
 
 
     @Test
@@ -19,7 +19,7 @@ public class ISG_006_PositiveTest {
 
         Actions actions = new Actions(Driver.getDriver());
 
-        ISG_006_Page hotel_page = new ISG_006_Page();
+        ISG_007_Page hotel_page = new ISG_007_Page();
 
         hotel_page.ilkLogin.click();
         hotel_page.usernameTextBox.sendKeys(ConfigReader.getProperty("username_CrysHotel"));

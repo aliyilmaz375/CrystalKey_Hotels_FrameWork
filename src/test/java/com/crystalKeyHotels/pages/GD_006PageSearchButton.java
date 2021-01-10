@@ -72,6 +72,10 @@ public class GD_006PageSearchButton {
     @FindBy(xpath = "(//div[@class='pagination-panel'])[1]")
     public WebElement listeDataSonuc;
 
+    @FindBy(xpath = "//td[@valign='top']")
+    public WebElement listeSonucBulunamadi;
+
+
 
     public void login_(){
 
@@ -114,6 +118,13 @@ public class GD_006PageSearchButton {
         GD_006PageSearchButton US006Page =new GD_006PageSearchButton();
         String dataSonucText = US006Page.listeDataSonuc.getText();
         return dataSonucText;
+    }
+
+
+    public String sonucBulunamadiText(){
+        GD_006PageSearchButton data =new GD_006PageSearchButton();
+        String sonucBulunamadiText = data.listeSonucBulunamadi.getText();
+        return sonucBulunamadiText;
     }
 
 }
