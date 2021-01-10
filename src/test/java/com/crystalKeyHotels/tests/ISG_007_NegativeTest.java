@@ -1,6 +1,6 @@
 package com.crystalKeyHotels.tests;
 
-import com.crystalKeyHotels.pages.ISG_006_Page;
+import com.crystalKeyHotels.pages.ISG_007_Page;
 import com.crystalKeyHotels.utilities.ConfigReader;
 import com.crystalKeyHotels.utilities.Driver;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ISG_006_Test {
+public class ISG_007_NegativeTest {
 
 
     @Test
@@ -19,7 +19,7 @@ public class ISG_006_Test {
 
         Actions actions = new Actions(Driver.getDriver());
 
-        ISG_006_Page hotel_page = new ISG_006_Page();
+        ISG_007_Page hotel_page = new ISG_007_Page();
 
         hotel_page.ilkLogin.click();
         hotel_page.usernameTextBox.sendKeys(ConfigReader.getProperty("username_CrysHotel"));
@@ -39,7 +39,7 @@ public class ISG_006_Test {
 
         hotel_page.priceTextBox.sendKeys(ConfigReader.getProperty("price"));
         hotel_page.dateStart.sendKeys(ConfigReader.getProperty("girisTarih"));
-        hotel_page.dateEnd.sendKeys(ConfigReader.getProperty("bitisTarihi"));
+        hotel_page.dateEnd.sendKeys(ConfigReader.getProperty("invalidBitisTarihi"));
         hotel_page.adultAmount.sendKeys(ConfigReader.getProperty("adultAmount"));
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         hotel_page.childrenAmount.sendKeys(ConfigReader.getProperty("childrenAmount"));
